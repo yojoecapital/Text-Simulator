@@ -1,10 +1,10 @@
-# Text Simulator
+# Texting Simulator
 
-Text Simulator is a React.js application that allows you to simulate and manage text messages. It provides a user-friendly interface for creating, editing, and organizing text messages.
+Texting Simulator is a React.js application that allows you to simulate and manage text messages. It provides a user-friendly interface for creating, editing, and organizing text messages.
 
 ## Website
 
-The Text Simulator app is deployed and accessible at https://yojoecapital.github.io/Texting-Simulator.
+The Texting Simulator app is deployed and accessible at https://yojoecapital.github.io/Texting-Simulator.
 
 ## Features
 
@@ -16,12 +16,12 @@ The Text Simulator app is deployed and accessible at https://yojoecapital.github
 
 ## Installation
 
-To run the Text Simulator app locally, you need to have Node.js and npm (Node Package Manager) installed on your machine. Follow these steps:
+To run the Texting Simulator app locally, you need to have Node.js and npm (Node Package Manager) installed on your machine. Follow these steps:
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/text-simulator.git
+git clone https://github.com/your-username/texting-simulator.git
 ```
 
 2. Navigate to the project directory:
@@ -42,7 +42,7 @@ npm install
 npm start
 ```
 
-5. Open your web browser and visit http://localhost:3000 to access the Text Simulator app.
+5. Open your web browser and visit http://localhost:3000 to access the Texting Simulator app.
 
 ## Usage
 
