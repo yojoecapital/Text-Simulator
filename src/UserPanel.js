@@ -134,7 +134,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
   return (
     <div className="user-panel container-fluid d-flex flex-column">
       <div>
-        <h1>Text Simulator <a href="https://github.com/yojoecapital" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
+        <h1>Text Simulator <a href="https://github.com/yojoecapital/Text-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
       </div>
       <div className="d-flex justify-content-between">
         <div className='btn-group m-2' role='group'>
