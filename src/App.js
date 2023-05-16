@@ -1,23 +1,47 @@
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import './bootstrap.min.css';
+import './TextSimulator.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import defaultProfileImage from './profile.jpg'; 
+import UserPanel from './UserPanel';
+import TextSimulator from './TextSimulator';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [visibleMessages, setVisibleMessages] = useState([]);
+  const [profileImage, setProfileImage] = useState(defaultProfileImage);
+  const [profileName, setProfileName] = useState('');
+  const [clockTime, setClockTime] = useState('');
+  const scrollRef = useRef(null);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="text-sim">
+        <TextSimulator
+          isDarkMode={isDarkMode}
+          visibleMessages={visibleMessages}
+          scrollRef={scrollRef}
+          profileImage={profileImage}
+          profileName={profileName}
+          clockTime={clockTime}
+        />
+      </div>
+      <div className="user-panel">
+        <UserPanel 
+          isDarkMode={isDarkMode}
+          setIsDarkMode={setIsDarkMode}
+          messages={messages} 
+          setMessages={setMessages} 
+          visibleMessages={visibleMessages} 
+          setVisibleMessages={setVisibleMessages} 
+          scrollRef={scrollRef}
+          setProfileImage={setProfileImage}
+          setProfileName={setProfileName}
+          setClockTime={setClockTime}
+        />
+      </div>
     </div>
   );
 }
