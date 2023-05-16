@@ -6,6 +6,8 @@ Texting Simulator is a React.js application that allows you to simulate and mana
 
 The Texting Simulator app is deployed and accessible at https://yojoecapital.github.io/Texting-Simulator.
 
+![demo](images/demo.jpg)
+
 ## Features
 
 - Create and edit text or image messages
