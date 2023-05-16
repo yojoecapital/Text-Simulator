@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/texting-simulator/static/css/main.3adfcec4.css",
-    "main.js": "/texting-simulator/static/js/main.609bcc0e.js",
-    "static/js/787.a2dd61bb.chunk.js": "/texting-simulator/static/js/787.a2dd61bb.chunk.js",
+    "main.js": "/texting-simulator/static/js/main.62f377ff.js",
+    "static/js/787.aba3820e.chunk.js": "/texting-simulator/static/js/787.aba3820e.chunk.js",
     "static/media/bootstrap-icons.woff?": "/texting-simulator/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/texting-simulator/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "static/media/received-sfx.mp3": "/texting-simulator/static/media/received-sfx.7d268b9748627e6dd1c5.mp3",
     "static/media/send-sfx.mp3": "/texting-simulator/static/media/send-sfx.fc1b89f31147a80431e7.mp3",
     "index.html": "/texting-simulator/index.html",
     "main.3adfcec4.css.map": "/texting-simulator/static/css/main.3adfcec4.css.map",
-    "main.609bcc0e.js.map": "/texting-simulator/static/js/main.609bcc0e.js.map",
-    "787.a2dd61bb.chunk.js.map": "/texting-simulator/static/js/787.a2dd61bb.chunk.js.map"
+    "main.62f377ff.js.map": "/texting-simulator/static/js/main.62f377ff.js.map",
+    "787.aba3820e.chunk.js.map": "/texting-simulator/static/js/787.aba3820e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3adfcec4.css",
-    "static/js/main.609bcc0e.js"
+    "static/js/main.62f377ff.js"
   ]
 }
