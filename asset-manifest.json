@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Texting-Simulator/static/css/main.adb6ec19.css",
-    "main.js": "/Texting-Simulator/static/js/main.e0699f55.js",
+    "main.css": "/Texting-Simulator/static/css/main.e864f410.css",
+    "main.js": "/Texting-Simulator/static/js/main.422c8c2c.js",
     "static/js/787.d5841674.chunk.js": "/Texting-Simulator/static/js/787.d5841674.chunk.js",
     "static/media/bootstrap-icons.woff?": "/Texting-Simulator/static/media/bootstrap-icons.4753c5ba57962b4d7bf8.woff",
     "static/media/bootstrap-icons.woff2?": "/Texting-Simulator/static/media/bootstrap-icons.6d63d0501e5ed7b79dab.woff2",
     "static/media/received-sfx.mp3": "/Texting-Simulator/static/media/received-sfx.7d268b9748627e6dd1c5.mp3",
     "static/media/send-sfx.mp3": "/Texting-Simulator/static/media/send-sfx.fc1b89f31147a80431e7.mp3",
     "index.html": "/Texting-Simulator/index.html",
-    "main.adb6ec19.css.map": "/Texting-Simulator/static/css/main.adb6ec19.css.map",
-    "main.e0699f55.js.map": "/Texting-Simulator/static/js/main.e0699f55.js.map",
+    "main.e864f410.css.map": "/Texting-Simulator/static/css/main.e864f410.css.map",
+    "main.422c8c2c.js.map": "/Texting-Simulator/static/js/main.422c8c2c.js.map",
     "787.d5841674.chunk.js.map": "/Texting-Simulator/static/js/787.d5841674.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.adb6ec19.css",
-    "static/js/main.e0699f55.js"
+    "static/css/main.e864f410.css",
+    "static/js/main.422c8c2c.js"
   ]
 }
