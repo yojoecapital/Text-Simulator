@@ -22,7 +22,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
     const updatedMessages = [...messages];
     updatedMessages.splice(index, 1);
     setMessages(updatedMessages);
-    if (updatedMessages.length == visibleMessages.length - 1)
+    if (updatedMessages.length === visibleMessages.length - 1)
       setVisibleMessages(updatedMessages);
     else setVisibleMessages([]);
     setActionTriggered('remove');
@@ -49,7 +49,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
       });
     }
     setActionTriggered(null);
-  }, [messages, visibleMessages, actionTriggered]);
+  }, [messages, visibleMessages, actionTriggered, scrollRef]);
 
   const handleKeyPress = (event, index) => {
     if (event.key === 'Enter' && event.shiftKey) {
@@ -134,7 +134,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
   return (
     <div className="user-panel container-fluid d-flex flex-column">
       <div>
-        <h1>Text Simulator <a href="https://github.com/yojoecapital/Text-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
+        <h1>Text Simulator <a href="https://github.com/yojoecapital/Texting-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
       </div>
       <div className="d-flex justify-content-between">
         <div className='btn-group m-2' role='group'>
@@ -181,7 +181,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
       <div className="flex-grow-1" style={{ overflow: 'auto' }}>
         {messages.map((message, index) => (
           <div key={index} className="input-group mt-1 mb-1">
-            <div className={`input-group-text ${index == visibleMessages.length - 1 ? 'bg-warning' : ''} `}>
+            <div className={`input-group-text ${index === visibleMessages.length - 1 ? 'bg-warning' : ''} `}>
               <label className="form-check form-switch">
                 <input
                   type="checkbox"

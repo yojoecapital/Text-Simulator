@@ -2,6 +2,10 @@
 
 Text Simulator is a React.js application that allows you to simulate and manage text messages. It provides a user-friendly interface for creating, editing, and organizing text messages.
 
+## Website
+
+The Text Simulator app is deployed and accessible at https://yojoecapital.github.io/Texting-Simulator.
+
 ## Features
 
 - Create and edit text or image messages

@@ -31,14 +31,14 @@ function TextSimulator({ isDarkMode, visibleMessages, scrollRef, profileImage, p
               message.file ? (
                 <img
                   src={message.file}
-                  alt="Image"
+                  alt=""
                   onError={(e) => {
                     e.target.onerror = null; // Reset the error handler to prevent potential infinite loop
                     e.target.src = defaultImage; 
                   }}
                 />
               ) : (
-                <img src={defaultImage} alt="Image" />
+                <img src={defaultImage} alt="" />
               )
             }
           </div>

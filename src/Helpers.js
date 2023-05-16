@@ -1,6 +1,6 @@
 export function isEmoji(text) {
   const regex = /<a?:.+?:\d{18}>|\p{Extended_Pictographic}/gu;
-  return text.length / 2 == 1 && regex.test(text);
+  return text.length / 2 === 1 && regex.test(text);
 }
 
 export function isWhiteSpace(text) {
