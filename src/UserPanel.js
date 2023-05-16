@@ -133,49 +133,32 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
 
   return (
     <div className="user-panel container-fluid d-flex flex-column">
-      <div>
-        <h1>Text Simulator <a href="https://github.com/yojoecapital/Texting-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
+      <div className='mt-5'>
+        <h1>Texting Simulator <a href="https://github.com/yojoecapital/Texting-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
       </div>
-      <div className="d-flex justify-content-between">
-        <div className='btn-group m-2' role='group'>
-          <button type="button" className="btn btn-primary" onClick={handleClear} disabled={visibleMessages.length === 0}>
-            <span className='bi-skip-start-fill'/>
-          </button>
-          <button type="button" className="btn btn-primary" onClick={handleBack} disabled={visibleMessages.length === 0}>
-            <span className='bi-caret-left-fill'/>
-          </button>
-          <button type="button" className="btn btn-primary" onClick={handleForward} disabled={visibleMessages.length === messages.length}>
-            <span className='bi-caret-right-fill'/>
-          </button>
-          <button type="button" className="btn btn-primary" onClick={handleFill} disabled={visibleMessages.length === messages.length}>
-            <span className='bi-skip-end-fill'/>
-          </button>
+      <div className="row">
+        <div className="col-auto">
+          <div className="btn-group m-2" role="group">
+            <button type="button" className="btn btn-primary" onClick={handleClear} disabled={visibleMessages.length === 0}><span className="bi-skip-start-fill" /></button>
+            <button type="button" className="btn btn-primary" onClick={handleBack} disabled={visibleMessages.length === 0}><span className="bi-caret-left-fill" /></button>
+            <button type="button" className="btn btn-primary" onClick={handleForward} disabled={visibleMessages.length === messages.length}><span className="bi-caret-right-fill" /></button>
+            <button type="button" className="btn btn-primary" onClick={handleFill} disabled={visibleMessages.length === messages.length}><span className="bi-skip-end-fill" /></button>
+          </div>
         </div>
-        <button type="button" className="btn btn-primary m-2" onClick={() => setIsDarkMode(!isDarkMode)}><span className={isDarkMode ? 'bi-moon' : 'bi-sun'}/></button>
-        <div className="input-group m-2">
-          <input
-            type="text"
-            className="form-control"
-            onChange={(e) => setProfileName(e.target.value)}
-            placeholder="Profile Name"
-          />
-          <input
-            type="time"
-            className="form-control"
-            onChange={(e) => setClockTime(e.target.value)}
-          />
+        <div className="col-auto">
+          <button type="button" className="btn btn-primary m-2" onClick={() => setIsDarkMode(!isDarkMode)}><span className={isDarkMode ? 'bi-moon' : 'bi-sun'} /></button>
         </div>
-        <div className="m-2">
-          <label className="input-group-text btn btn-primary" htmlFor="profile-image-input">
-            <span className='bi-person-circle'> Choose Profile</span>
-          </label>
-          <input
-            type="file"
-            className="d-none"
-            id="profile-image-input"
-            accept="image/*"
-            onChange={handleImageUpload}
-          />
+        <div className="col">
+          <div className="input-group m-2">
+            <input type="text" className="form-control" onChange={(e) => setProfileName(e.target.value)} placeholder="Profile Name" />
+            <input type="time" className="form-control" onChange={(e) => setClockTime(e.target.value)} />
+          </div>
+        </div>
+        <div className="col-auto">
+          <div className="m-2">
+            <label className="input-group-text btn btn-primary" htmlFor="profile-image-input"><span className="bi-person-circle"> Choose Profile</span></label>
+            <input type="file" className="d-none" id="profile-image-input" accept="image/*" onChange={handleImageUpload} />
+          </div>
         </div>
       </div>
       <div className="flex-grow-1" style={{ overflow: 'auto' }}>
@@ -258,10 +241,10 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
           <span className='bi-plus'> Add Message</span>
         </button>
         <button type="button" className="btn btn-primary" onClick={downloadMessages}>
-          <span className='bi-download'> Download</span>
+          <span className='bi-download'/>
         </button>
         <label className="btn btn-primary">
-          <span className='bi-upload'> Upload</span>
+          <span className='bi-upload'/>
           <input type="file" accept=".json" onChange={uploadMessages} style={{ display: 'none' }} />
         </label>
       </div>

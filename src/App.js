@@ -18,32 +18,42 @@ function App() {
 
   return (
     <div className="app">
-      <div className="text-sim">
-        <TextSimulator
-          isDarkMode={isDarkMode}
-          visibleMessages={visibleMessages}
-          scrollRef={scrollRef}
-          profileImage={profileImage}
-          profileName={profileName}
-          clockTime={clockTime}
-        />
-      </div>
-      <div className="user-panel">
-        <UserPanel 
-          isDarkMode={isDarkMode}
-          setIsDarkMode={setIsDarkMode}
-          messages={messages} 
-          setMessages={setMessages} 
-          visibleMessages={visibleMessages} 
-          setVisibleMessages={setVisibleMessages} 
-          scrollRef={scrollRef}
-          setProfileImage={setProfileImage}
-          setProfileName={setProfileName}
-          setClockTime={setClockTime}
-        />
+      <div className="container-fluid">
+        <div className="row h-100">
+
+          <div className="col-md-6 bg-light">
+            <div className="user-panel">
+              <UserPanel 
+                isDarkMode={isDarkMode}
+                setIsDarkMode={setIsDarkMode}
+                messages={messages} 
+                setMessages={setMessages} 
+                visibleMessages={visibleMessages} 
+                setVisibleMessages={setVisibleMessages} 
+                scrollRef={scrollRef}
+                setProfileImage={setProfileImage}
+                setProfileName={setProfileName}
+                setClockTime={setClockTime}
+              />
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="text-sim">
+              <TextSimulator
+                isDarkMode={isDarkMode}
+                visibleMessages={visibleMessages}
+                scrollRef={scrollRef}
+                profileImage={profileImage}
+                profileName={profileName}
+                clockTime={clockTime}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
+  
 }
 
 export default App;

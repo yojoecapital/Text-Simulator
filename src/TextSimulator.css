@@ -7,8 +7,7 @@
   font-family: "SanFrancisco";
   resize: both;
   overflow-y: scroll;
-  max-width: 100%;
-  max-height: 100%;
+  max-height: 90vh;
 }
 
 .imessage-profile {
