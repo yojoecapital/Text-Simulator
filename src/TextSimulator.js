@@ -2,9 +2,9 @@ import React from 'react';
 import { isEmoji, isWhiteSpace, convertToStandardTime } from './Helpers';
 import defaultImage from './image.jpg'; 
 
-function TextSimulator({ isDarkMode, visibleMessages, scrollRef, profileImage, profileName, clockTime }) {
+function TextSimulator({ isDarkMode, visibleMessages, scrollRef, profileImage, profileName, clockTime, containerWidth,  containerHeight }) {
   return (
-    <div className={`mt-5 imessage-container ${isDarkMode ? 'dark-mode' : ''}`} style={{height: '80vh', width: '50%'}} ref={scrollRef}>
+    <div className={`mt-5 imessage-container ${isDarkMode ? 'dark-mode' : ''}`} style={{height: containerHeight, width: containerWidth}} ref={scrollRef}>
       <div className="imessage-profile">
         <div className="row justify-content-between align-items-center mb-1" style={{width: '100%'}}>
           <div className="col-auto">

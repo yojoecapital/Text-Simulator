@@ -15,6 +15,8 @@ function App() {
   const [profileName, setProfileName] = useState('');
   const [clockTime, setClockTime] = useState('');
   const scrollRef = useRef(null);
+  const [containerWidth, setContainerWidth] = useState('50%');
+  const [containerHeight, setContainerHeight] = useState('80vh');
 
   return (
     <div className="app">
@@ -34,6 +36,8 @@ function App() {
                 setProfileImage={setProfileImage}
                 setProfileName={setProfileName}
                 setClockTime={setClockTime}
+                setContainerWidth={setContainerWidth}
+                setContainerHeight={setContainerHeight}
               />
             </div>
           </div>
@@ -46,6 +50,8 @@ function App() {
                 profileImage={profileImage}
                 profileName={profileName}
                 clockTime={clockTime}
+                containerHeight={containerHeight}
+                containerWidth={containerWidth}
               />
             </div>
           </div>

@@ -3,7 +3,7 @@ import sendSfx from './send-sfx.mp3';
 import receivedSfx from './received-sfx.mp3';
 
 
-function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMessages, setVisibleMessages, scrollRef, setProfileImage, setProfileName, setClockTime }) {
+function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMessages, setVisibleMessages, scrollRef, setProfileImage, setProfileName, setClockTime, setContainerWidth, setContainerHeight }) {
   const inputRefs = useRef([]);
   const [actionTriggered, setActionTriggered] = useState(null);
 
@@ -96,6 +96,16 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
     };
   };
 
+  const handleHeightChange = (e) => {
+    const newHeight = e.target.value;
+    setContainerHeight(`${newHeight}px`);
+  };
+
+  const handleWidthChange = (e) => {
+    const newWidth = e.target.value;
+    setContainerWidth(`${newWidth}px`);
+  };
+
   const downloadMessages = () => {
     const updatedMessages = messages.map((message) => {
       if (message.hasOwnProperty('file')) {
@@ -150,7 +160,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
         </div>
         <div className="col">
           <div className="input-group m-2">
-            <input type="text" className="form-control" onChange={(e) => setProfileName(e.target.value)} placeholder="Profile Name" />
+            <input type="text" className="form-control" onChange={(e) => setProfileName(e.target.value)} placeholder="Name" />
             <input type="time" className="form-control" onChange={(e) => setClockTime(e.target.value)} />
           </div>
         </div>
@@ -158,6 +168,12 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
           <div className="m-2">
             <label className="input-group-text btn btn-primary" htmlFor="profile-image-input"><span className="bi-person-circle"> Choose Profile</span></label>
             <input type="file" className="d-none" id="profile-image-input" accept="image/*" onChange={handleImageUpload} />
+          </div>
+        </div>
+        <div className="col">
+          <div className="input-group m-2">
+            <input type="number" className="form-control" onChange={handleWidthChange} placeholder="Width" />
+            <input type="number" className="form-control" onChange={handleHeightChange} placeholder="Height"/>
           </div>
         </div>
       </div>
