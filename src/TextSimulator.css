@@ -1,13 +1,11 @@
 .imessage-container {
   background-color: #fff;
-  border: 1px solid #e5e5ea;
-  border-radius: 0.25rem;
   display: flex;
   flex-direction: column;
   font-family: "SanFrancisco";
   resize: both;
   overflow-y: scroll;
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .imessage-profile {

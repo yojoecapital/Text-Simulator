@@ -62,6 +62,17 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
     }
   };
 
+  const handleKeyProgression = (event, index) => {
+    if (event.key === 'ArrowRight') {
+      event.preventDefault();
+      handleForward();
+    }
+    if (event.key === 'ArrowLeft') {
+      event.preventDefault();
+      handleBack(index);
+    }
+  }
+
   const handleForward = () => {
     if (visibleMessages.length < messages.length) {
       const nextMessage = messages[visibleMessages.length];
@@ -142,9 +153,9 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
   };
 
   return (
-    <div className="user-panel container-fluid d-flex flex-column">
+    <div className="user-panel container-fluid d-flex flex-column" onKeyDown={handleKeyProgression} tabIndex="0">
       <div className='mt-5'>
-        <h1>Texting Simulator <a href="https://github.com/yojoecapital/Texting-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-dark bi-github"> /yojoecapital</a></h1>
+        <h1>Texting Simulator <a href="https://github.com/yojoecapital/Texting-Simulator" target="_blank" rel="noopener noreferrer" className="badge bg-info bi-github">/yojoecapital</a></h1>
       </div>
       <div className="row">
         <div className="col-auto">
@@ -170,7 +181,7 @@ function UserPanel({ setIsDarkMode, isDarkMode, messages, setMessages, visibleMe
             <input type="file" className="d-none" id="profile-image-input" accept="image/*" onChange={handleImageUpload} />
           </div>
         </div>
-        <div className="col">
+        <div className="col-auto">
           <div className="input-group m-2">
             <input type="number" className="form-control" onChange={handleWidthChange} placeholder="Width" />
             <input type="number" className="form-control" onChange={handleHeightChange} placeholder="Height"/>
