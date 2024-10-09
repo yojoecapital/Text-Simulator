@@ -23,7 +23,7 @@ To run the Texting Simulator app locally, you need to have Node.js and npm (Node
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/texting-simulator.git
+git clone https://github.com/yojoecapital/texting-simulator.git
 ```
 
 2. Navigate to the project directory:
